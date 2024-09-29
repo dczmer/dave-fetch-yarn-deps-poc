@@ -28,7 +28,7 @@
         nativeBuildInputs = with pkgs; [
           yarnConfigHook
           # NOTE: package.json has to define a 'build' script.
-          # FUN FACT: the 'buld' script has to actually do _something_.
+          # FUN FACT: the 'build' script has to actually do _something_.
           # an empty string will produce a vague error message.
           yarnBuildHook
           # NOTE: package.json must have name and version
