@@ -1,0 +1,10 @@
+{
+  "name": "testapp",
+  "version": "0.0.1",
+  "dependencies": {
+    "htmx": "^0.0.2"
+  },
+  "scripts": {
+    "build": "echo 'hi'"
+  }
+}
