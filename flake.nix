@@ -20,7 +20,7 @@
       yarnOfflineCache = pkgs.fetchYarnDeps {
         inherit yarnLock;
         # NOTE: you have to delete this whenever yarn.lock is changed
-        hash = "sha256-wzMw3Xd9ZSfR8hb2n8ZBUbh+s/et6LeemlQQy9gR1qU=";
+        hash = "sha256-tvB6AOKA+QPVjA1bUnoivU//68MF7Sd+0KEf2mD7uus=";
       };
       yarnApp = pkgs.stdenv.mkDerivation {
         src = self;
@@ -44,7 +44,7 @@
     {
       packages.x86_64-linux = {
         offlineCache = yarnOfflineCache;
-        testDrv = yarnApp;
+        yarnApp = yarnApp;
       };
       devShells.x86_64-linux = {
         # NOTE: with poetry2nix, we used two devshells:
