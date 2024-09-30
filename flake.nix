@@ -20,7 +20,7 @@
       yarnOfflineCache = pkgs.fetchYarnDeps {
         inherit yarnLock;
         # NOTE: you have to delete this whenever yarn.lock is changed
-        hash = "sha256-tvB6AOKA+QPVjA1bUnoivU//68MF7Sd+0KEf2mD7uus=";
+        hash = "sha256-Vk8VGhmp584TffwIPfzWbrI32rSuBAbl7RlDENV3Rbg=";
       };
       yarnApp = pkgs.stdenv.mkDerivation {
         src = self;
@@ -63,6 +63,7 @@
         yarnShell = pkgs.mkShell {
           packages = with pkgs; [
             yarn
+            nodejs
           ];
         };
       };
